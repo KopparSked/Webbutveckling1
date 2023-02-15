@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <title>domain4</title>
+  </head>
+  <body>
+    <button onclick="zoomIn()">Zooma in</button>
+    <button onclick="zoomOut()">Zooma ut</button>
+    <div id="A4">
+      <h1>Min A4-sida</h1>
+      <p>Här är någon text som du kan skriva.</p>
+      <img src="bilder/wienerkorv.jpg" alt="Bildtext">
+    </div>
+
+    <script>
+      let zoomLevel = 1; // Startzoomnivå
+
+      function zoomIn() {
+        zoomLevel += 0.1;
+        document.getElementById("A4").style.transform = "scale(" + zoomLevel + ")";
+      }
+
+      function zoomOut() {
+        zoomLevel -= 0.1;
+        document.getElementById("A4").style.transform = "scale(" + zoomLevel + ")";
+      }
+    </script>
+  </body>
+</html>

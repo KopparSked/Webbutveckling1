@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Testa JS-objekt</title>
+        <meta charset="UTF-8">
+        <style>
+            p{
+                color: red;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>Bosse</p>
+            <p>Jossam</p>
+        </div>
+        <script>
+            
+            function Person(namnet, alder, langd){
+                this.name = namnet;
+                this.age = alder;
+                this.length = langd;
+                this.printLengthMeter = function(enhet){
+                    if(enhet == "m"){
+                        let meterLength = this.lenght / 100;
+                        alert(this.name + " är " + meterLength+ " meter lång ")
+                    }
+                    else if(enhet == "cm")
+                        alert(this.name + " är " + this.length + " centimeter ")
+                    else{
+                        alert("HALLLLÖÖÖÖJ")
+                    }
+                }
+            }
+            
+            for(let i=100; i >= 15; i--){
+                //alert(i);
+                let nyPerson = document.createElement("p");
+                nyPerson.innerHTML = "Vi är på sifffran " + i;
+                document.getElementById("container").appendChild(nyPerson);
+                
+            }
+
+            let person1 = new Person("Oskar", 82, 156);
+            let person2 = new Person("wiliam", 3, 85 );
+            let person3 = new Person("Jossan", 2.5, 145);
+            let person4 = new Person("adam", 24, 89);
+
+           // person3.printLengthMeter("m");
+            //person3.printLengthMeter("cm");
+            //person3.printLengthMeter();
+            
+        </script>
+    </body>
+</html>
