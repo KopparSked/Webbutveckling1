@@ -18,17 +18,18 @@
     <button onclick="zoomOut()">Zooma ut</button>
     <button onclick="blurMore()">Mer suddigt</button>
     <button onclick="blurLess()">mindre suddigt></button>
+    <button onclick="nextImage()">Nästa bild</button>
     <div id="A4"></div>
       <h1>Min A4-sida</h1>
       <p>Här är någon text som du kan skriva.</p>
       <div></div>
       <img src="bilder/Jonathan-Wilson-6.jpg" alt="Bildtext">
       <img src="bilder/wienerkorv.jpg" alt="Bildtext">
-
-    
     </div>
     <script>
       let zoomLevel = 1; // Startzoomnivå
+      let currentImage = 0;
+      let images = document.getElementsByTagName("img");
 
       function zoomIn() {
         zoomLevel += 0.1;
@@ -38,6 +39,16 @@
       function zoomOut() {
         zoomLevel -= 0.1;
         document.getElementById("A4").style.transform = "scale(" + zoomLevel + ")";
+      }
+      function blurmore(){
+        let currentFilter = images[currentImage].style.filter || "blur(0)";
+        let currentLevel = parseInt(currentFilter.replace("blur(","").replace(")",""));
+        images[currentImage].style.filter = "blur(" + (currentLevel + 1) + "px";
+      }
+      function blurLess(){
+        let currentFilter = images[currentImage].style.filter || "blur(0)";
+        let currentLevel = parent(currentFilter.replace("blur(","").replace(")",""))
+        images[currentImage].style.filter = "blur(" + Math.max(currentLevel - 1, 0) + "px)";
       }
     </script>
   </body>
