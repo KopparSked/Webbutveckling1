@@ -53,7 +53,10 @@
       }
       function nextImage(){
         currentImage =(currentImage +1) % images.length;
-        for (let i = 0; i < images.length; i++)
+        for (let i = 0; i < images.length; i++){
+          images[i].style.display = i === currentImage ? "block" : "none";
+          
+        }
       }
     </script>
   </body>
