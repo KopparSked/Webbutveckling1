@@ -49,7 +49,7 @@
       }
       function blurLess(){
         let currentFilter = images[currentImage].style.filter || "blur(0)";
-        let currentLevel = pareInt(currentFilter.replace("blur(","").replace(")",""))
+        let currentLevel = parseInt(currentFilter.replace("blur(","").replace(")",""))
         images[currentImage].style.filter = "blur(" + Math.max(currentLevel - 1, 0) + "px)";
       }
       function nextImage(){
