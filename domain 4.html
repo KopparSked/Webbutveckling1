@@ -5,7 +5,7 @@
     <style>
       #A4 {
         max-width: 21cm;
-        max-height: 29,7cm;
+        max-height: 29.7cm;
       }
       img{
         filter: blur(0); /*start filternivån*/
@@ -49,7 +49,7 @@
       }
       function blurLess(){
         let currentFilter = images[currentImage].style.filter || "blur(0)";
-        let currentLevel = parent(currentFilter.replace("blur(","").replace(")",""))
+        let currentLevel = pareInt(currentFilter.replace("blur(","").replace(")",""))
         images[currentImage].style.filter = "blur(" + Math.max(currentLevel - 1, 0) + "px)";
       }
       function nextImage(){
