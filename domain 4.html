@@ -23,8 +23,8 @@
       <h1>Min A4-sida</h1>
       <p>Här är någon text som du kan skriva.</p>
       <div>
-      <img src="bilder/Jonathan-Wilson-6.jpg" alt="gitarist" width="100" height="200">
-      <img src="bilder/wienerkorv.jpg" alt="Körv" width="500" height="600">
+        <img id="image1" src="bilder/Jonathan-Wilson-6.jpg" alt="gitarist" width="100" height="200">
+        <img id="image2" src="bilder/wienerkorv.jpg" alt="Körv" width="500" height="600">
 
     </div>
     <script>
@@ -50,6 +50,10 @@
         let currentFilter = images[currentImage].style.filter || "blur(0)";
         let currentLevel = parent(currentFilter.replace("blur(","").replace(")",""))
         images[currentImage].style.filter = "blur(" + Math.max(currentLevel - 1, 0) + "px)";
+      }
+      function nextImage(){
+        currentImage =(currentImage +1) % images.length;
+        for (let i = 0; i < images.length; i++)
       }
     </script>
   </body>
