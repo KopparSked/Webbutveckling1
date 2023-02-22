@@ -9,6 +9,7 @@
       }
       img{
         filter: blur(0); /*start filternivån*/
+        max-width: 100%
       }
 
     </style>
@@ -41,7 +42,7 @@
         zoomLevel -= 0.1;
         document.getElementById("A4").style.transform = "scale(" + zoomLevel + ")";
       }
-      function blurmore(){
+      function blurMore(){
         let currentFilter = images[currentImage].style.filter || "blur(0)";
         let currentLevel = parseInt(currentFilter.replace("blur(","").replace(")",""));
         images[currentImage].style.filter = "blur(" + (currentLevel + 1) + "px";
