@@ -4,17 +4,24 @@
     <title>domain4</title>
     <style>
       #A4 {
-        max-width: 2480px;
-        max-height: 3508px;
-        
-
+        max-width: 210mm;
+        max-height: 297mm;
+        border: 1px solid red;
+        max-width: calc(100% - 40px);
+        max-height: calc(100% - 40px);
+        border: 20px solid red;
+        box-sizing: border-box;
       }
+      body{
+        display:flex;
+      } 
+
+      
       img{
         filter: blur(0); /*start filternivån*/
         max-width: 100%
       }
-      p {outline-color:red;}
-      p.A4 {outline-style: outset;}
+
     </style>
   </head>
   <body>
