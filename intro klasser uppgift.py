@@ -17,8 +17,7 @@ class teknikare:
 
 def visa_namn_eller_kör(teknikarna):
     while True:
-        val = input("Välj ett alternativ:\n1. Visa namnen\n5. Kör programmet som vanligt\n")
-
+        val = input("Välj ett alternativ:\n1. Visa namnen\n2. Kör programmet som vanligt\n")
         if val == "1":
             for namn in Namn:
                 print(namn)
