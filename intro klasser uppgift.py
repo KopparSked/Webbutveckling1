@@ -21,13 +21,17 @@ def visa_namn_eller_kör(teknikarna):
     if val == "1":
         for namn in Namn:
             print(namn)
-    elif val == "5":
+    elif val == "2":
         for teknikare in teknikarna:
             print(teknikare)
             print("Oj du va så kattig niklas att", random.choice(Namn), "fick en riktigt hård dari")
     else:
             print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
 
+    fortsätt = input("Vill du fortsätta? (ja/nej): ")
+    if fortsätt.lower() != "ja":
+        breakpoint
+        
 hård_dari = random.randrange(20)
 
 if __name__ == "__main__":
