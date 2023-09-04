@@ -17,14 +17,15 @@ class teknikare:
 
 def visa_namn_eller_kör(teknikarna):
     while True:
-        val = input("Välj ett alternativ:\n1. Visa namnen\n2. Kör programmet som vanligt\n")
+        val = input("Välj ett alternativ skriv in den siffran som står brevid:\n1. Visa alla som är med\n2. Kör programmet som vanligt\n3. Se vem som är riktigt kått på dig niklas\n Skriv här:" )
         if val == "1":
             for namn in Namn:
                 print(namn)
         elif val == "2":
             for teknikare in teknikarna:
                 print(teknikare)
-                print("Oj du va så kattig niklas att", random.choice(Namn), "fick en riktigt hård dari")
+        elif val == "3":
+            print("Oj du va så kattig niklas att", random.choice(Namn), "fick en riktigt hård dari")
         else:
             print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
 
