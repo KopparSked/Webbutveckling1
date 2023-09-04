@@ -24,21 +24,24 @@ def visa_namn_eller_kör(teknikarna):
             for teknikare in teknikarna:
                 print(teknikare)
         elif val == "3":
-            print("Oj du va så kattig niklas att", random.choice(Namn), "fick en riktigt hård dari")
+            random_teknikare=random.choice(Namn)
+            print("Oj du va så kattig niklas att", random_teknikare, "fick en riktigt hård dari")
         elif val == "4":
-            print("På väg till kolan fick",kått_elev," en riktigt ",hård_dari,"antal gånger på bussen och tunnelbanan")
+            random_teknikare=random.choice(Namn)
+            hård_dari=random.randrange(20)
+            print("På väg till kolan fick",random_teknikare," en riktigt ",hård_dari,"antal gånger på bussen och tunnelbanan")
         else:
             print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
 
         fortsätt = input("Vill du fortsätta? (ja/nej): ")
-        if fortsätt.lower() != "ja":
-            breakpoint
-        elif fortsätt =="nej":
-            exit
-        else: 
+        if fortsätt.lower() == "ja":
+            break
+        elif fortsätt.lower() == "nej":
+            exit()
+        else:
             print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
 
-hård_dari = random.randrange(20)
+
 if __name__ == "__main__":
     daniel_intance = teknikare("Daniel", 18, 1, 500, 4, 20)
     amos_intance = teknikare("Amos", 17, "-3", 250, 10, 35)
@@ -49,7 +52,6 @@ if __name__ == "__main__":
     teknikarna = [daniel_intance, amos_intance, max_intance, dexter_intance, aron_intance]
     
     Namn = ["Daniel", "Amos", "Max", "Dexter", "Aron"]
-    kått_elev=random.choice(Namn)
 
     visa_namn_eller_kör(teknikarna)
 
