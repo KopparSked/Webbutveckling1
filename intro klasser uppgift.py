@@ -33,13 +33,16 @@ def visa_namn_eller_kör(teknikarna):
         else:
             print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
 
-        fortsätt = input("Vill du fortsätta? (ja/nej): ")
-        if fortsätt.lower() == "ja":
-            break
-        elif fortsätt.lower() == "nej":
-            exit()
-        else:
-            print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
+        while True:
+            fortsätt = input("Vill du fortsätta? (ja/nej): ")
+            if fortsätt.lower() == "ja":
+                break
+            elif fortsätt.lower() == "nej":
+                exit()
+            else:
+                print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
+                continue 
+
 
 
 if __name__ == "__main__":
