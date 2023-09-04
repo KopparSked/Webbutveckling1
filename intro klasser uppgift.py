@@ -10,8 +10,8 @@ class teknikare:
         self.boner_count_today = boner_count_today
 
     def __str__ (self) -> str:
-        return_string = f"{self.name} är {self.age} och har knullat med {self.bodycount} , samt har intagit  {self.caffine_count_today} mg caffine today"
-        return_string += f" är även mod i {self.dicord_mod_count} antal servrar\n, fått en sten hård dari {self.boner_count_today} antal gånger idag"
+        return_string = f"{self.name} är {self.age} och har knullat med {self.bodycount} , samt har intagit  {self.caffine_count_today} mg caffine today\n"
+        return_string += f" är även mod i {self.dicord_mod_count} antal servrar\n, fått en sten hård dari {self.boner_count_today} antal gånger idag\n"
         return return_string
 
 def visa_namn_eller_kör(teknikarna):
