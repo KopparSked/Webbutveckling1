@@ -11,13 +11,12 @@ class teknikare:
 
     def __str__ (self) -> str:
         return_string = f"{self.name} är {self.age} och har knullat med {self.bodycount} , samt har intagit  {self.caffine_count_today} mg caffine today"
-        return_string += f" är även mod i {self.dicord_mod_count} antal servrar, fått en sten hård dari {self.boner_count_today} antal gånger idag, "
-        return_string += f" på väg till skolan fick {self.name} hård dari {hård_dari} antal gånger på bussen och tunnelbanan\n"
+        return_string += f" är även mod i {self.dicord_mod_count} antal servrar\n, fått en sten hård dari {self.boner_count_today} antal gånger idag"
         return return_string
 
 def visa_namn_eller_kör(teknikarna):
     while True:
-        val = input("Välj ett alternativ skriv in den siffran som står brevid:\n1. Visa alla som är med\n2. Kör programmet som vanligt\n3. Se vem som är riktigt kått på dig niklas\n Skriv här:" )
+        val = input("Välj ett alternativ skriv in den siffran som står brevid:\n1. Visa alla som är med\n2. Kör programmet som vanligt\n3. Se vem som är riktigt kått på dig niklas\nSe hur många gånger en elev fick en hård dari påväg till skola på tunnelbanan och bussen\nSkriv här:" )
         if val == "1":
             for namn in Namn:
                 print(namn)
@@ -26,6 +25,8 @@ def visa_namn_eller_kör(teknikarna):
                 print(teknikare)
         elif val == "3":
             print("Oj du va så kattig niklas att", random.choice(Namn), "fick en riktigt hård dari")
+        elif val == "4":
+            print("På väg till kolan fick en riktigt ",hård_dari" antal gånger på bussen och tunnelbanan\n")
         else:
             print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
 
@@ -34,7 +35,6 @@ def visa_namn_eller_kör(teknikarna):
             breakpoint
 
 hård_dari = random.randrange(20)
-
 if __name__ == "__main__":
     daniel_intance = teknikare("Daniel", 18, 1, 500, 4, 20)
     amos_intance = teknikare("Amos", 17, "-3", 250, 10, 35)
@@ -45,6 +45,7 @@ if __name__ == "__main__":
     teknikarna = [daniel_intance, amos_intance, max_intance, dexter_intance, aron_intance]
     
     Namn = ["Daniel", "Amos", "Max", "Dexter", "Aron"]
+    kått_elev=random.randrange(Namn)
 
     visa_namn_eller_kör(teknikarna)
 
