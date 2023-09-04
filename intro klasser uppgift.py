@@ -16,7 +16,7 @@ class teknikare:
 
 def visa_namn_eller_kör(teknikarna):
     while True:
-        val = input("Välj ett alternativ skriv in den siffran som står brevid:\n1. Visa alla som är med\n2. Kör programmet som vanligt\n3. Se vem som är riktigt kått på dig niklas\nSe hur många gånger en elev fick en hård dari påväg till skola på tunnelbanan och bussen\nSkriv här:" )
+        val = input("Välj ett alternativ skriv in den siffran som står brevid:\n1. Visa alla som är med\n2. Kör programmet som vanligt\n3. Se vem som är riktigt kått på dig niklas\n4. Se hur många gånger en elev fick en hård dari påväg till skola på tunnelbanan och bussen\nSkriv här:" )
         if val == "1":
             for namn in Namn:
                 print(namn)
@@ -26,13 +26,17 @@ def visa_namn_eller_kör(teknikarna):
         elif val == "3":
             print("Oj du va så kattig niklas att", random.choice(Namn), "fick en riktigt hård dari")
         elif val == "4":
-            print("På väg till kolan fick en riktigt ",hård_dari" antal gånger på bussen och tunnelbanan\n")
+            print("På väg till kolan fick",kått_elev," en riktigt ",hård_dari,"antal gånger på bussen och tunnelbanan")
         else:
             print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
 
         fortsätt = input("Vill du fortsätta? (ja/nej): ")
         if fortsätt.lower() != "ja":
             breakpoint
+        elif fortsätt =="nej":
+            exit
+        else: 
+            print("Oj, nu blev det fel här. Är du dum eller jag skrev ju hur man väljer och du skriver nåt annat jävla mongo.")
 
 hård_dari = random.randrange(20)
 if __name__ == "__main__":
@@ -45,7 +49,7 @@ if __name__ == "__main__":
     teknikarna = [daniel_intance, amos_intance, max_intance, dexter_intance, aron_intance]
     
     Namn = ["Daniel", "Amos", "Max", "Dexter", "Aron"]
-    kått_elev=random.randrange(Namn)
+    kått_elev=random.choice(Namn)
 
     visa_namn_eller_kör(teknikarna)
 
